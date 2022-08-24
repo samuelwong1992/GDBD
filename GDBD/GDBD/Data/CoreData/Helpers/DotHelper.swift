@@ -6,10 +6,21 @@
 //
 
 import Foundation
+import CoreData
 
 class DotCoreDataService: DotService {
+    var persistenceController: PersistenceController
+    
+    init() {
+        self.persistenceController = PersistenceController.shared
+    }
+    
+    init(persistenceController: PersistenceController) {
+        self.persistenceController = persistenceController
+    }
+    
     func createDot(isGood: Bool, withText text: String?, atDate: Date, completion: @escaping(_ dot: Dot?, _ error: Error?) -> Void) {
-        let context = PersistenceController.shared.context
+        let context = persistenceController.context
         let dot = Dot(context: context)
         
         dot.text = text
@@ -22,5 +33,17 @@ class DotCoreDataService: DotService {
         } catch {
             return completion(nil, error)
         }
+    }
+    
+    func fetchDots(completion: @escaping(_ dots: [Dot], _ error: Error?) -> Void) {
+        let dotsFetch = Dot.fetchRequest()
+         
+        do {
+            let dots = try persistenceController.context.fetch(dotsFetch)
+            return completion(dots, nil)
+        } catch {
+            return completion([], error)
+        }
+
     }
 }

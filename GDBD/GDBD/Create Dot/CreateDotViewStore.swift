@@ -26,10 +26,10 @@ class CreateDotViewStore: ObservableObject {
         self.storageService = storageService
     }
     
-    func createDot(completion: @escaping((_ dot: Dot) -> Void)) {
+    func createDot(completion: @escaping((_ dot: Dot?) -> Void)) {
         storageService.createDot(isGood: self.isGood, withText: self.text, atDate: self.date) { dot, error in
-            guard error == nil else { self.error = error; return }
-            guard let dot = dot else { self.error = NSError.standardNoDataError(); return }
+            guard error == nil else { self.error = error; completion(nil); return }
+            guard let dot = dot else { self.error = NSError.standardNoDataError(); completion(nil);  return }
             
             completion(dot)
         }

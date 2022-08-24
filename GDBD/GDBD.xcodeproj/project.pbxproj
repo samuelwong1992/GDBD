@@ -16,10 +16,12 @@
 		46371FAA28AF70AA0079BC3B /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46371FA928AF70AA0079BC3B /* BaseButton.swift */; };
 		46371FAC28AF70B70079BC3B /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46371FAB28AF70B70079BC3B /* PrimaryButton.swift */; };
 		46371FAE28AF717A0079BC3B /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46371FAD28AF717A0079BC3B /* SecondaryButton.swift */; };
+		4639C7FC28B6665E00107A27 /* DotMockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4639C7FB28B6665E00107A27 /* DotMockService.swift */; };
+		4639C7FF28B666CF00107A27 /* DotServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4639C7FE28B666CF00107A27 /* DotServiceTests.swift */; };
 		4641863728A607DC009188D8 /* GDBDApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4641863628A607DC009188D8 /* GDBDApp.swift */; };
 		4641863B28A607DF009188D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4641863A28A607DF009188D8 /* Assets.xcassets */; };
 		4641863E28A607DF009188D8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4641863D28A607DF009188D8 /* Preview Assets.xcassets */; };
-		4641864D28A607DF009188D8 /* CreateDotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4641864C28A607DF009188D8 /* CreateDotTests.swift */; };
+		4641864D28A607DF009188D8 /* CreateDotViewStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4641864C28A607DF009188D8 /* CreateDotViewStoreTests.swift */; };
 		4641865728A607DF009188D8 /* GDBDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4641865628A607DF009188D8 /* GDBDUITests.swift */; };
 		4641865928A607DF009188D8 /* GDBDUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4641865828A607DF009188D8 /* GDBDUITestsLaunchTests.swift */; };
 		466C657E28A613ED00DF8951 /* MainTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466C657D28A613ED00DF8951 /* MainTabBarView.swift */; };
@@ -32,7 +34,6 @@
 		46F4C93528B346D200641857 /* NSError + Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F4C93428B346D200641857 /* NSError + Utilities.swift */; };
 		46F4C93828B3BE6300641857 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F4C93728B3BE6300641857 /* Colors.swift */; };
 		46F4C93A28B5A23600641857 /* CreateDotViewStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F4C93928B5A23600641857 /* CreateDotViewStore.swift */; };
-		46F4C93E28B5A38E00641857 /* DotMockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F4C93D28B5A38E00641857 /* DotMockService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,12 +63,14 @@
 		46371FA928AF70AA0079BC3B /* BaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
 		46371FAB28AF70B70079BC3B /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		46371FAD28AF717A0079BC3B /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
+		4639C7FB28B6665E00107A27 /* DotMockService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DotMockService.swift; sourceTree = "<group>"; };
+		4639C7FE28B666CF00107A27 /* DotServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotServiceTests.swift; sourceTree = "<group>"; };
 		4641863328A607DC009188D8 /* GDBD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GDBD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4641863628A607DC009188D8 /* GDBDApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDBDApp.swift; sourceTree = "<group>"; };
 		4641863A28A607DF009188D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4641863D28A607DF009188D8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4641864828A607DF009188D8 /* GDBDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GDBDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4641864C28A607DF009188D8 /* CreateDotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDotTests.swift; sourceTree = "<group>"; };
+		4641864C28A607DF009188D8 /* CreateDotViewStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDotViewStoreTests.swift; sourceTree = "<group>"; };
 		4641865228A607DF009188D8 /* GDBDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GDBDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4641865628A607DF009188D8 /* GDBDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDBDUITests.swift; sourceTree = "<group>"; };
 		4641865828A607DF009188D8 /* GDBDUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDBDUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -81,7 +84,6 @@
 		46F4C93428B346D200641857 /* NSError + Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSError + Utilities.swift"; sourceTree = "<group>"; };
 		46F4C93728B3BE6300641857 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		46F4C93928B5A23600641857 /* CreateDotViewStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDotViewStore.swift; sourceTree = "<group>"; };
-		46F4C93D28B5A38E00641857 /* DotMockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotMockService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,30 @@
 			path = Buttons;
 			sourceTree = "<group>";
 		};
+		4639C7FD28B666BD00107A27 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4639C7FE28B666CF00107A27 /* DotServiceTests.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		4639C80028B6681F00107A27 /* Mocking */ = {
+			isa = PBXGroup;
+			children = (
+				4639C80128B6682600107A27 /* Services */,
+			);
+			path = Mocking;
+			sourceTree = "<group>";
+		};
+		4639C80128B6682600107A27 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4639C7FB28B6665E00107A27 /* DotMockService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		4641862A28A607DB009188D8 = {
 			isa = PBXGroup;
 			children = (
@@ -202,7 +228,8 @@
 		4641864B28A607DF009188D8 /* GDBDTests */ = {
 			isa = PBXGroup;
 			children = (
-				46F4C93C28B5A37B00641857 /* MockServices */,
+				4639C80028B6681F00107A27 /* Mocking */,
+				4639C7FD28B666BD00107A27 /* Services */,
 				46F4C93B28B5A2E200641857 /* Create Dot Tests */,
 			);
 			path = GDBDTests;
@@ -299,17 +326,9 @@
 		46F4C93B28B5A2E200641857 /* Create Dot Tests */ = {
 			isa = PBXGroup;
 			children = (
-				4641864C28A607DF009188D8 /* CreateDotTests.swift */,
+				4641864C28A607DF009188D8 /* CreateDotViewStoreTests.swift */,
 			);
 			path = "Create Dot Tests";
-			sourceTree = "<group>";
-		};
-		46F4C93C28B5A37B00641857 /* MockServices */ = {
-			isa = PBXGroup;
-			children = (
-				46F4C93D28B5A38E00641857 /* DotMockService.swift */,
-			);
-			path = MockServices;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -469,8 +488,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4641864D28A607DF009188D8 /* CreateDotTests.swift in Sources */,
-				46F4C93E28B5A38E00641857 /* DotMockService.swift in Sources */,
+				4639C7FF28B666CF00107A27 /* DotServiceTests.swift in Sources */,
+				4641864D28A607DF009188D8 /* CreateDotViewStoreTests.swift in Sources */,
+				4639C7FC28B6665E00107A27 /* DotMockService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

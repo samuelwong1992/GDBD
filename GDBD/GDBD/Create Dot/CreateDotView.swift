@@ -60,7 +60,8 @@ struct CreateDotView: View {
                         }
                         
                         PrimaryButton(title: "Submit") {
-                            modelStore.createDot(completion: {(_) -> Void in
+                            modelStore.createDot(completion: { dot -> Void in
+                                guard dot != nil else { return }
                                 animateSucceeded()
                             })
                         }

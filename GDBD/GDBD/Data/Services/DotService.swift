@@ -9,4 +9,5 @@ import Foundation
 
 protocol DotService {
     func createDot(isGood: Bool, withText text: String?, atDate: Date, completion: @escaping(_ dot: Dot?, _ error: Error?) -> Void)
+    func fetchDots(completion: @escaping(_ dots: [Dot], _ error: Error?) -> Void)
 }
