@@ -8,20 +8,14 @@
 import SwiftUI
 
 struct MainTabBarView: View {
-    
-    
     var body: some View {
         VStack(spacing: 0) {
             NewDotView()
                 .foregroundColor(Color.white)
             
-            CreateDotView()
+            CalendarView()
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(RoundedCornerView(tl: 40, tr: 40, bl: 0, br: 0).fill(Color(UIColor.systemBackground)))
-            
-//            CalendarView()
-//                .frame(maxWidth: .infinity, maxHeight: .infinity)
-//                .background(RoundedCornerView(tl: 40, tr: 40, bl: 0, br: 0).fill(Color(UIColor.systemBackground)))
             
             HStack {
                 TabBarButton(systemImageName: "calendar", title: "Calendar") {
@@ -38,7 +32,7 @@ struct MainTabBarView: View {
             .background(Color(UIColor.systemBackground))
             
             
-        }.background(Color.gray)
+        }.background(Color.midnightGray)
             
     }
 }
