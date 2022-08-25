@@ -33,6 +33,10 @@ class CreateDotViewStoreTests: XCTestCase {
             completionHits = true
             XCTAssertNotNil(sut.error)
             XCTAssertTrue(sut.showAlert)
+            
+            sut.dismissError()
+            XCTAssertNil(sut.error)
+            XCTAssertFalse(sut.showAlert)
         }
         
         XCTAssert(completionHits)

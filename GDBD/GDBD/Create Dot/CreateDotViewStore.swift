@@ -14,7 +14,7 @@ class CreateDotViewStore: ObservableObject {
     
     @Published var error: Error? {
         didSet {
-            showAlert = true
+            showAlert = error != nil
         }
     }
     @Published var showAlert: Bool = false
