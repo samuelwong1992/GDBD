@@ -8,82 +8,65 @@
 import SwiftUI
 
 struct CalendarView: View {
+    @ObservedObject private var viewStore: CalendarViewStore
     
-    private var gridColumns: [GridItem] = [
-        GridItem(),
-        GridItem(),
-        GridItem(),
-        GridItem(),
-        GridItem(),
-        GridItem(),
-        GridItem(),
-    ]
-    
-    private var selectedDate: Date = Date().addingDays(numDays: 0)
-    
-    func dayItemsFromSelectedDate() -> [Date] {
-        var toReturn: [Date] = []
-        let firstDay = selectedDate.firstDateOfMonth()
-        
-        for i in (1 ..< firstDay.get(.weekday)).reversed() {
-            toReturn.append(firstDay.addingDays(numDays: (-i)))
-        }
-        for i in 0 ..< selectedDate.lastDateOfMonth().get(.day) {
-            toReturn.append(firstDay.addingDays(numDays: i))
-        }
-        for i in 1 ..< 8 - selectedDate.lastDateOfMonth().get(.weekday) {
-            toReturn.append(selectedDate.lastDateOfMonth().addingDays(numDays: i))
-        }
-        
-        return toReturn
+    init(viewStore: CalendarViewStore) {
+        self.viewStore = viewStore
     }
     
     var body: some View {
         VStack {
             HStack {
+                StyleSwitcher(calendarStyle: $viewStore.calendarStyle)
+                
                 Spacer()
                 
-                Button {
-                    
-                } label: {
-                    Image(systemName: "chevron.left")
-                }
-                
-                Text ("Month, Year")
-                
-                Button {
-                    
-                } label: {
-                    Image(systemName: "chevron.right")
-                }
+                MonthDatePicker(date: $viewStore.selectedDate)
             }.padding()
             
+            CalendarComponent<EquatableView<GDBDCalendarViewCell>>(cellForDate: { date in
+                GDBDCalendarViewCell(date: date,
+                                 isSelected: date.standardizedDate().compare(viewStore.selectedDate.standardizedDate()) == .orderedSame,
+                                 currentMonth: viewStore.selectedDate.get(.month),
+                                 yesterdaysColor: { viewStore.colour(forDay: date.addingDays(numDays: -1)) },
+                                 todaysColor: { viewStore.colour(forDay: date) },
+                                 tomorrowsColor: { viewStore.colour(forDay: date.addingDays(numDays: 1)) },
+                                 style: viewStore.calendarStyle,
+                                 didSelect: { date in
+                                    viewStore.selectedDate = date
+                                }
+                ).equatable()
+            }, viewStore: CalendarComponentViewStore(selectedDate: $viewStore.selectedDate))
+            
             HStack {
-                ForEach(1..<8, id: \.self) { i in
-                    let day = Date.DayOfWeek(rawValue: i)!.title
-                    Text(day[day.startIndex ..< day.index(day.startIndex, offsetBy: 2)]).frame(maxWidth: .infinity)
-                }
+                Text("\(viewStore.selectedDate.readableString(format: .formal))")
+                    .font(.title2)
+                    .padding(EdgeInsets(top: 4, leading: 8, bottom: 4, trailing: 4))
+                Spacer()
             }
+                
             
-            LazyVGrid(columns: gridColumns) {
-                ForEach(0..<dayItemsFromSelectedDate().count, id: \.self) { i in
-                    let date = dayItemsFromSelectedDate()[i]
-                    Text("\(date.get(.day))")
-                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-                        .aspectRatio(1, contentMode: .fill)
-                        .foregroundColor(date.get(.month) == selectedDate.get(.month) ? .primary : .gray)
-                        
-                }
+            DotsTableView(dots: viewStore.dots(forDay: viewStore.selectedDate))
+        }.alert("Error", isPresented: $viewStore.showError) {
+            Button("OK") {
+                viewStore.dismissError()
             }
-            
-            Text("\(selectedDate.firstDateOfMonth())")
-            Spacer()
+        } message: {
+            Text(viewStore.error?.localizedDescription ?? "")
         }
     }
 }
 
 struct CalendarView_Previews: PreviewProvider {
     static var previews: some View {
-        CalendarView()
+        TestableCalandarView()
+    }
+    
+    struct TestableCalandarView: View {
+        @State var selectedDate: Date = Date()
+        
+        var body: some View {
+            CalendarView(viewStore: CalendarViewStore(storageService: DotCoreDataService(persistenceController: PersistenceController.preview), date: $selectedDate))
+        }
     }
 }

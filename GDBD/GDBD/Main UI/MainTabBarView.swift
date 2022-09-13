@@ -8,12 +8,15 @@
 import SwiftUI
 
 struct MainTabBarView: View {
+    @State var selectedDate: Date = Date()
+    var storageService: DotService
+    
     var body: some View {
         VStack(spacing: 0) {
             NewDotView()
                 .foregroundColor(Color.white)
             
-            CalendarView()
+            CalendarView(viewStore: CalendarViewStore(storageService: storageService, date: $selectedDate))
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(RoundedCornerView(tl: 40, tr: 40, bl: 0, br: 0).fill(Color(UIColor.systemBackground)))
             
@@ -39,9 +42,11 @@ struct MainTabBarView: View {
 
 struct MainTabBarView_Previews: PreviewProvider {
     static var previews: some View {
-        MainTabBarView()
-        
-        MainTabBarView().preferredColorScheme(.dark)
+        Group {
+            MainTabBarView(storageService: DotCoreDataService(persistenceController: PersistenceController.preview))
+            
+            MainTabBarView(storageService: DotCoreDataService(persistenceController: PersistenceController.preview)).preferredColorScheme(.dark)
+        }
     }
 }
 

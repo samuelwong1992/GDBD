@@ -45,10 +45,30 @@ extension Date {
     }
     
     func lastDateOfMonth() -> Date {
-        return Calendar.current.date(byAdding: DateComponents(month: 1, day: -1), to: self.firstDateOfMonth())!
+        return Calendar.current.date(byAdding: DateComponents(month: 1, second: -1), to: self.firstDateOfMonth())!
     }
     
     func addingDays(numDays: Int) -> Date {
         return Calendar.current.date(byAdding: DateComponents(day: numDays), to: self)!
+    }
+    
+    func addingMonths(numMonths: Int) -> Date {
+        return Calendar.current.date(byAdding: DateComponents(month: numMonths), to: self)!
+    }
+}
+
+extension Date {
+    enum DateFormat: String {
+        case timeDayMonthYear = "h:mm a, dd MMM, yy"
+        case formal = "EEEE, dd MMMM, yyyy"
+    }
+    
+    func readableString(format: DateFormat) -> String {
+        let dateFormat:DateFormatter = DateFormatter()
+        let timeZone = TimeZone.current
+        dateFormat.dateFormat = format.rawValue
+        dateFormat.timeZone = timeZone
+        
+        return dateFormat.string(from: self)
     }
 }

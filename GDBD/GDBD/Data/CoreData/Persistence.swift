@@ -38,4 +38,31 @@ struct PersistenceController {
         })
         container.viewContext.automaticallyMergesChangesFromParent = true
     }
+    
+    static var preview: PersistenceController = {
+        let previewController = PersistenceController(inMemory: true)
+        
+        let dotService = DotCoreDataService(persistenceController: previewController)
+        for i in 0 ..< 30 {
+            for j in 0 ..< 10 {
+                if Int.random(in: 0..<2)%2 == 0 {
+                    dotService.createDot(isGood: Int.random(in: 0..<2)%2 == 0, withText: "Dot number \(j)", atDate: Date().addingDays(numDays: -i)) { dot, error in }
+                }
+            }
+        }
+        
+        return previewController
+    }()
+    
+    func createRandomDemoData() {
+        let dotService = DotCoreDataService(persistenceController: self)
+        for i in 0 ..< 30 {
+            for j in 0 ..< 10 {
+                if Int.random(in: 0..<2)%2 == 0 {
+                    dotService.createDot(isGood: Int.random(in: 0..<2)%2 == 0, withText: "Dot number \(j)", atDate: Date().addingDays(numDays: -i)) { dot, error in }
+                }
+            }
+        }
+    }
+
 }

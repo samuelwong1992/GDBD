@@ -10,33 +10,120 @@ import XCTest
 
 class DotServiceTests: XCTestCase {
 
-    let persistanceController = PersistenceController(inMemory: true)
-    lazy var mockDotService: DotCoreDataService = {
-       return DotCoreDataService(persistenceController: persistanceController)
-    }()
+    var persistanceController: PersistenceController!
+    var mockDotService: DotCoreDataService!
+    
+    override func setUp() {
+        super.setUp()
+        persistanceController = PersistenceController(inMemory: true)
+        mockDotService = DotCoreDataService(persistenceController: persistanceController)
+    }
 
     func test_createDotForCoreData() throws {
         let test_isGood = true
         let test_text = "some text"
         let test_date = Date()
         
-        mockDotService.fetchDots { dots, error in
+        mockDotService.fetchDotsBetweenDate(startDate: Date().addingMonths(numMonths: -12), endDate: Date().addingMonths(numMonths: 12)) { dots, error in
             XCTAssert(dots.isEmpty)
         }
         
         mockDotService.createDot(isGood: test_isGood, withText: test_text, atDate: test_date) { dot, error in
             do {
                 let testDot = try XCTUnwrap(dot)
-                XCTAssert(testDot.is_good == test_isGood)
+                XCTAssert(testDot.isGood == test_isGood)
                 XCTAssert(testDot.text == test_text)
-                XCTAssert(testDot.date_time_created == test_date)
+                XCTAssert(testDot.dateTimeCreated == test_date)
                 
-                self.mockDotService.fetchDots { dots, error in
+                self.mockDotService.fetchDotsBetweenDate(startDate: Date().addingMonths(numMonths: -12), endDate: Date().addingMonths(numMonths: 12)) { dots, error in
                     XCTAssert(dots.count == 1)
-                    XCTAssert(dots[0].is_good == test_isGood)
+                    XCTAssert(dots[0].isGood == test_isGood)
                     XCTAssert(dots[0].text == test_text)
-                    XCTAssert(dots[0].date_time_created == test_date)
+                    XCTAssert(dots[0].dateTimeCreated == test_date)
                 }
+            } catch {
+                XCTFail("dot created was nil")
+            }
+        }
+    }
+    
+    func test_fetchDotsBetweenDateForCoreData() throws {
+        mockDotService.fetchDotsBetweenDate(startDate: Date().addingMonths(numMonths: -12), endDate: Date().addingMonths(numMonths: 12)) { dots, error in
+            XCTAssert(dots.isEmpty)
+        }
+        
+        let test_isGood = true
+        let test_text = "some text"
+        
+        mockDotService.createDot(isGood: test_isGood, withText: test_text, atDate: Date()) { dot, error in
+            do {
+                let _ = try XCTUnwrap(dot)
+            } catch {
+                XCTFail("dot created was nil")
+            }
+        }
+        
+        mockDotService.createDot(isGood: test_isGood, withText: test_text, atDate: Date().addingMonths(numMonths: 2)) { dot, error in
+            do {
+                let _ = try XCTUnwrap(dot)
+            } catch {
+                XCTFail("dot created was nil")
+            }
+        }
+        
+        mockDotService.createDot(isGood: test_isGood, withText: test_text, atDate: Date().addingMonths(numMonths: -2)) { dot, error in
+            do {
+                let _ = try XCTUnwrap(dot)
+            } catch {
+                XCTFail("dot created was nil")
+            }
+        }
+        
+        mockDotService.createDot(isGood: test_isGood, withText: test_text, atDate: Date().addingDays(numDays: 1)) { dot, error in
+            do {
+                let _ = try XCTUnwrap(dot)
+            } catch {
+                XCTFail("dot created was nil")
+            }
+        }
+        
+        self.mockDotService.fetchDotsBetweenDate(startDate: Date().addingMonths(numMonths: -1), endDate: Date().addingMonths(numMonths: 1)) { dots, error in
+            XCTAssert(dots.count == 2)
+        }
+    }
+    
+    func test_earliestDot() throws {
+        let test_isGood = true
+        let test_text = "some text"
+        
+        let date = Date()
+        let earlierDate = Date().addingDays(numDays: -1)
+        
+        mockDotService.fetchEarliestDot { dot, error in
+            XCTAssertNil(dot)
+        }
+        
+        mockDotService.createDot(isGood: test_isGood, withText: test_text, atDate: date) { dot, error in
+            XCTAssertNotNil(dot)
+        }
+        
+        mockDotService.fetchEarliestDot { dot, error in
+            do {
+                let dot = try XCTUnwrap(dot)
+                XCTAssertEqual(dot.dateTimeCreated.compare(date), .orderedSame)
+            } catch {
+                XCTFail("dot created was nil")
+            }
+        }
+        
+        mockDotService.createDot(isGood: test_isGood, withText: test_text, atDate: earlierDate) { dot, error in
+            XCTAssertNotNil(dot)
+        }
+        
+        mockDotService.fetchEarliestDot { dot, error in
+            do {
+                let dot = try XCTUnwrap(dot)
+                XCTAssertEqual(dot.dateTimeCreated.compare(earlierDate), .orderedSame)
             } catch {
                 XCTFail("dot created was nil")
             }

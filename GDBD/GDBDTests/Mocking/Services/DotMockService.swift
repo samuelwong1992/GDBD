@@ -18,29 +18,47 @@ class DotMockService: DotService {
     
     func createDot(isGood: Bool, withText text: String?, atDate: Date, completion: @escaping (GDBD.Dot?, Error?) -> Void) {
         if succeeds {
-            let dot = Dot(context: persistanceController.context)
-            dot.is_good = isGood
-            dot.text = text
-            dot.date_time_created = atDate
+            let dot = Dot(
+                dateTimeCreated: atDate,
+                isGood: isGood,
+                text: text)
             return completion(dot, nil)
         } else {
             return completion(nil, NSError.standardErrorWithString(errorString: "some error"))
         }
     }
     
-    func fetchDots(completion: @escaping ([GDBD.Dot], Error?) -> Void) {
+    func fetchDotsBetweenDate(startDate: Date, endDate: Date, completion: @escaping ([GDBD.Dot], Error?) -> Void) {
         let test_isGood = true
         let test_text = "some text"
         let test_date = Date()
         
         if succeeds {
-            let dot = Dot(context: persistanceController.context)
-            dot.is_good = test_isGood
-            dot.text = test_text
-            dot.date_time_created = test_date
+            let dot = Dot(
+                dateTimeCreated: test_date,
+                isGood: test_isGood,
+                text: test_text
+            )
             return completion([dot], nil)
         } else {
             return completion([], NSError.standardErrorWithString(errorString: "some error"))
+        }
+    }
+    
+    func fetchEarliestDot(completion: @escaping (GDBD.Dot?, Error?) -> Void) {
+        let test_isGood = true
+        let test_text = "some text"
+        let test_date = Date()
+        
+        if succeeds {
+            let dot = Dot(
+                dateTimeCreated: test_date,
+                isGood: test_isGood,
+                text: test_text
+            )
+            return completion(dot, nil)
+        } else {
+            return completion(nil, NSError.standardErrorWithString(errorString: "some error"))
         }
     }
 }

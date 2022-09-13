@@ -7,11 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		46371FA028AF5C070079BC3B /* GDBD.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 46371F9828AF5C070079BC3B /* GDBD.xcdatamodeld */; };
-		46371FA128AF5C070079BC3B /* Dot+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46371F9B28AF5C070079BC3B /* Dot+CoreDataProperties.swift */; };
-		46371FA228AF5C070079BC3B /* Dot+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46371F9C28AF5C070079BC3B /* Dot+CoreDataClass.swift */; };
 		46371FA328AF5C070079BC3B /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46371F9D28AF5C070079BC3B /* Persistence.swift */; };
-		46371FA428AF5C070079BC3B /* DotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46371F9F28AF5C070079BC3B /* DotHelper.swift */; };
+		46371FA428AF5C070079BC3B /* DotCoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46371F9F28AF5C070079BC3B /* DotCoreDataService.swift */; };
 		46371FA728AF5E190079BC3B /* DotService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46371FA628AF5E190079BC3B /* DotService.swift */; };
 		46371FAA28AF70AA0079BC3B /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46371FA928AF70AA0079BC3B /* BaseButton.swift */; };
 		46371FAC28AF70B70079BC3B /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46371FAB28AF70B70079BC3B /* PrimaryButton.swift */; };
@@ -26,6 +23,20 @@
 		4641865928A607DF009188D8 /* GDBDUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4641865828A607DF009188D8 /* GDBDUITestsLaunchTests.swift */; };
 		466C657E28A613ED00DF8951 /* MainTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466C657D28A613ED00DF8951 /* MainTabBarView.swift */; };
 		466C658228A6183000DF8951 /* CreateDotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466C658128A6183000DF8951 /* CreateDotView.swift */; };
+		46973B8428B6F55C00037315 /* CalendarViewStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46973B8328B6F55C00037315 /* CalendarViewStore.swift */; };
+		46973B8628B72EBF00037315 /* UIColor + Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46973B8528B72EBF00037315 /* UIColor + Utilities.swift */; };
+		469BFA0E28CE132F00D380D4 /* StyleSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469BFA0D28CE132F00D380D4 /* StyleSwitcher.swift */; };
+		469BFA1128CE255400D380D4 /* CalendarViewStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469BFA1028CE255400D380D4 /* CalendarViewStoreTests.swift */; };
+		469BFA1428D09CC800D380D4 /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469BFA1328D09CC800D380D4 /* CalendarCell.swift */; };
+		469E61BC28CCC331008D86B3 /* CalendarComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469E61BB28CCC331008D86B3 /* CalendarComponent.swift */; };
+		469E61BE28CCC367008D86B3 /* GDBDCalendarViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469E61BD28CCC367008D86B3 /* GDBDCalendarViewCell.swift */; };
+		469E61C128CCC872008D86B3 /* Dot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469E61C028CCC872008D86B3 /* Dot.swift */; };
+		469E61C828CCC9AE008D86B3 /* GDBD.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 469E61C628CCC9AE008D86B3 /* GDBD.xcdatamodeld */; };
+		469E61CB28CCCAAB008D86B3 /* DotCDModel+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469E61C928CCCAAB008D86B3 /* DotCDModel+CoreDataClass.swift */; };
+		469E61CC28CCCAAB008D86B3 /* DotCDModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469E61CA28CCCAAB008D86B3 /* DotCDModel+CoreDataProperties.swift */; };
+		469E61CF28CCCC60008D86B3 /* DotCDModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469E61CE28CCCC60008D86B3 /* DotCDModelFactory.swift */; };
+		469E61D128CCD7B1008D86B3 /* DotsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469E61D028CCD7B1008D86B3 /* DotsTableView.swift */; };
+		469E61D528CCE1E0008D86B3 /* MonthDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469E61D428CCE1E0008D86B3 /* MonthDatePicker.swift */; };
 		46E90BBD28ADBC8200A63878 /* RoundedCornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E90BBC28ADBC8200A63878 /* RoundedCornerView.swift */; };
 		46E90BC028ADD1F700A63878 /* NewDotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E90BBF28ADD1F700A63878 /* NewDotView.swift */; };
 		46E90BEF28AF39EC00A63878 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E90BEE28AF39EC00A63878 /* CalendarView.swift */; };
@@ -54,11 +65,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		46371F9928AF5C070079BC3B /* GDBD.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GDBD.xcdatamodel; sourceTree = "<group>"; };
-		46371F9B28AF5C070079BC3B /* Dot+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dot+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		46371F9C28AF5C070079BC3B /* Dot+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dot+CoreDataClass.swift"; sourceTree = "<group>"; };
 		46371F9D28AF5C070079BC3B /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		46371F9F28AF5C070079BC3B /* DotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DotHelper.swift; sourceTree = "<group>"; };
+		46371F9F28AF5C070079BC3B /* DotCoreDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DotCoreDataService.swift; sourceTree = "<group>"; };
 		46371FA628AF5E190079BC3B /* DotService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotService.swift; sourceTree = "<group>"; };
 		46371FA928AF70AA0079BC3B /* BaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
 		46371FAB28AF70B70079BC3B /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
@@ -76,6 +84,20 @@
 		4641865828A607DF009188D8 /* GDBDUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDBDUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		466C657D28A613ED00DF8951 /* MainTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarView.swift; sourceTree = "<group>"; };
 		466C658128A6183000DF8951 /* CreateDotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDotView.swift; sourceTree = "<group>"; };
+		46973B8328B6F55C00037315 /* CalendarViewStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewStore.swift; sourceTree = "<group>"; };
+		46973B8528B72EBF00037315 /* UIColor + Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Utilities.swift"; sourceTree = "<group>"; };
+		469BFA0D28CE132F00D380D4 /* StyleSwitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleSwitcher.swift; sourceTree = "<group>"; };
+		469BFA1028CE255400D380D4 /* CalendarViewStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewStoreTests.swift; sourceTree = "<group>"; };
+		469BFA1328D09CC800D380D4 /* CalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
+		469E61BB28CCC331008D86B3 /* CalendarComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarComponent.swift; sourceTree = "<group>"; };
+		469E61BD28CCC367008D86B3 /* GDBDCalendarViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDBDCalendarViewCell.swift; sourceTree = "<group>"; };
+		469E61C028CCC872008D86B3 /* Dot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dot.swift; sourceTree = "<group>"; };
+		469E61C728CCC9AE008D86B3 /* GDBD.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GDBD.xcdatamodel; sourceTree = "<group>"; };
+		469E61C928CCCAAB008D86B3 /* DotCDModel+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DotCDModel+CoreDataClass.swift"; sourceTree = "<group>"; };
+		469E61CA28CCCAAB008D86B3 /* DotCDModel+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DotCDModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		469E61CE28CCCC60008D86B3 /* DotCDModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotCDModelFactory.swift; sourceTree = "<group>"; };
+		469E61D028CCD7B1008D86B3 /* DotsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotsTableView.swift; sourceTree = "<group>"; };
+		469E61D428CCE1E0008D86B3 /* MonthDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthDatePicker.swift; sourceTree = "<group>"; };
 		46E90BBC28ADBC8200A63878 /* RoundedCornerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornerView.swift; sourceTree = "<group>"; };
 		46E90BBF28ADD1F700A63878 /* NewDotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDotView.swift; sourceTree = "<group>"; };
 		46E90BEE28AF39EC00A63878 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
@@ -114,10 +136,11 @@
 		46371F9728AF5C070079BC3B /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				46371F9828AF5C070079BC3B /* GDBD.xcdatamodeld */,
+				469E61C628CCC9AE008D86B3 /* GDBD.xcdatamodeld */,
 				46371F9D28AF5C070079BC3B /* Persistence.swift */,
 				46371F9A28AF5C070079BC3B /* Classes */,
-				46371F9E28AF5C070079BC3B /* Helpers */,
+				46371F9E28AF5C070079BC3B /* Services */,
+				469E61CD28CCCB11008D86B3 /* Factories */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -125,18 +148,18 @@
 		46371F9A28AF5C070079BC3B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				46371F9B28AF5C070079BC3B /* Dot+CoreDataProperties.swift */,
-				46371F9C28AF5C070079BC3B /* Dot+CoreDataClass.swift */,
+				469E61C928CCCAAB008D86B3 /* DotCDModel+CoreDataClass.swift */,
+				469E61CA28CCCAAB008D86B3 /* DotCDModel+CoreDataProperties.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		46371F9E28AF5C070079BC3B /* Helpers */ = {
+		46371F9E28AF5C070079BC3B /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				46371F9F28AF5C070079BC3B /* DotHelper.swift */,
+				46371F9F28AF5C070079BC3B /* DotCoreDataService.swift */,
 			);
-			path = Helpers;
+			path = Services;
 			sourceTree = "<group>";
 		};
 		46371FA528AF5E0B0079BC3B /* Services */ = {
@@ -231,6 +254,7 @@
 				4639C80028B6681F00107A27 /* Mocking */,
 				4639C7FD28B666BD00107A27 /* Services */,
 				46F4C93B28B5A2E200641857 /* Create Dot Tests */,
+				469BFA0F28CE252D00D380D4 /* Calendar */,
 			);
 			path = GDBDTests;
 			sourceTree = "<group>";
@@ -247,9 +271,88 @@
 		466C658028A6181000DF8951 /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
+				469E61B928C6356F008D86B3 /* Components */,
 				46E90BEE28AF39EC00A63878 /* CalendarView.swift */,
+				46973B8328B6F55C00037315 /* CalendarViewStore.swift */,
 			);
 			path = Calendar;
+			sourceTree = "<group>";
+		};
+		469BFA0C28CE131600D380D4 /* StyleSwitcher */ = {
+			isa = PBXGroup;
+			children = (
+				469BFA0D28CE132F00D380D4 /* StyleSwitcher.swift */,
+			);
+			path = StyleSwitcher;
+			sourceTree = "<group>";
+		};
+		469BFA0F28CE252D00D380D4 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				469BFA1028CE255400D380D4 /* CalendarViewStoreTests.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		469BFA1228D09C8B00D380D4 /* GDBDCalanderCell */ = {
+			isa = PBXGroup;
+			children = (
+				469E61BD28CCC367008D86B3 /* GDBDCalendarViewCell.swift */,
+			);
+			path = GDBDCalanderCell;
+			sourceTree = "<group>";
+		};
+		469E61B928C6356F008D86B3 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				469BFA0C28CE131600D380D4 /* StyleSwitcher */,
+				469E61D328CCDA7A008D86B3 /* MonthDatePicker */,
+				469E61D228CCDA06008D86B3 /* TableView */,
+				469E61BA28CCC31C008D86B3 /* Calendar */,
+				469BFA1228D09C8B00D380D4 /* GDBDCalanderCell */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		469E61BA28CCC31C008D86B3 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				469E61BB28CCC331008D86B3 /* CalendarComponent.swift */,
+				469BFA1328D09CC800D380D4 /* CalendarCell.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		469E61BF28CCC847008D86B3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				469E61C028CCC872008D86B3 /* Dot.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		469E61CD28CCCB11008D86B3 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				469E61CE28CCCC60008D86B3 /* DotCDModelFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		469E61D228CCDA06008D86B3 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				469E61D028CCD7B1008D86B3 /* DotsTableView.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		469E61D328CCDA7A008D86B3 /* MonthDatePicker */ = {
+			isa = PBXGroup;
+			children = (
+				469E61D428CCE1E0008D86B3 /* MonthDatePicker.swift */,
+			);
+			path = MonthDatePicker;
 			sourceTree = "<group>";
 		};
 		46E90BBB28ADBC6100A63878 /* Helpers */ = {
@@ -275,6 +378,7 @@
 			children = (
 				46E90BF228AF3E9700A63878 /* Date + Utilities.swift */,
 				46F4C93428B346D200641857 /* NSError + Utilities.swift */,
+				46973B8528B72EBF00037315 /* UIColor + Utilities.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -292,6 +396,7 @@
 		46E90C0D28AF5B1400A63878 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				469E61BF28CCC847008D86B3 /* Models */,
 				46371FA528AF5E0B0079BC3B /* Services */,
 				46371F9728AF5C070079BC3B /* CoreData */,
 			);
@@ -461,25 +566,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				469E61D128CCD7B1008D86B3 /* DotsTableView.swift in Sources */,
 				46371FA328AF5C070079BC3B /* Persistence.swift in Sources */,
 				46E90BF328AF3E9700A63878 /* Date + Utilities.swift in Sources */,
 				46F4C93528B346D200641857 /* NSError + Utilities.swift in Sources */,
-				46371FA228AF5C070079BC3B /* Dot+CoreDataClass.swift in Sources */,
+				469E61CF28CCCC60008D86B3 /* DotCDModelFactory.swift in Sources */,
+				46973B8628B72EBF00037315 /* UIColor + Utilities.swift in Sources */,
+				469E61D528CCE1E0008D86B3 /* MonthDatePicker.swift in Sources */,
 				46E90BEF28AF39EC00A63878 /* CalendarView.swift in Sources */,
+				469E61BE28CCC367008D86B3 /* GDBDCalendarViewCell.swift in Sources */,
 				46371FAE28AF717A0079BC3B /* SecondaryButton.swift in Sources */,
-				46371FA028AF5C070079BC3B /* GDBD.xcdatamodeld in Sources */,
-				46371FA428AF5C070079BC3B /* DotHelper.swift in Sources */,
+				46371FA428AF5C070079BC3B /* DotCoreDataService.swift in Sources */,
 				4641863728A607DC009188D8 /* GDBDApp.swift in Sources */,
+				469E61C828CCC9AE008D86B3 /* GDBD.xcdatamodeld in Sources */,
 				466C657E28A613ED00DF8951 /* MainTabBarView.swift in Sources */,
 				46F4C93A28B5A23600641857 /* CreateDotViewStore.swift in Sources */,
-				46371FA128AF5C070079BC3B /* Dot+CoreDataProperties.swift in Sources */,
+				469E61CB28CCCAAB008D86B3 /* DotCDModel+CoreDataClass.swift in Sources */,
 				46371FA728AF5E190079BC3B /* DotService.swift in Sources */,
 				46F4C93828B3BE6300641857 /* Colors.swift in Sources */,
 				46371FAA28AF70AA0079BC3B /* BaseButton.swift in Sources */,
+				469BFA1428D09CC800D380D4 /* CalendarCell.swift in Sources */,
+				469BFA0E28CE132F00D380D4 /* StyleSwitcher.swift in Sources */,
+				46973B8428B6F55C00037315 /* CalendarViewStore.swift in Sources */,
 				466C658228A6183000DF8951 /* CreateDotView.swift in Sources */,
+				469E61BC28CCC331008D86B3 /* CalendarComponent.swift in Sources */,
 				46371FAC28AF70B70079BC3B /* PrimaryButton.swift in Sources */,
 				46E90BC028ADD1F700A63878 /* NewDotView.swift in Sources */,
+				469E61CC28CCCAAB008D86B3 /* DotCDModel+CoreDataProperties.swift in Sources */,
 				46F4C93228B3159A00641857 /* TitledTextField.swift in Sources */,
+				469E61C128CCC872008D86B3 /* Dot.swift in Sources */,
 				46E90BBD28ADBC8200A63878 /* RoundedCornerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -488,6 +603,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				469BFA1128CE255400D380D4 /* CalendarViewStoreTests.swift in Sources */,
 				4639C7FF28B666CF00107A27 /* DotServiceTests.swift in Sources */,
 				4641864D28A607DF009188D8 /* CreateDotViewStoreTests.swift in Sources */,
 				4639C7FC28B6665E00107A27 /* DotMockService.swift in Sources */,
@@ -809,12 +925,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		46371F9828AF5C070079BC3B /* GDBD.xcdatamodeld */ = {
+		469E61C628CCC9AE008D86B3 /* GDBD.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				46371F9928AF5C070079BC3B /* GDBD.xcdatamodel */,
+				469E61C728CCC9AE008D86B3 /* GDBD.xcdatamodel */,
 			);
-			currentVersion = 46371F9928AF5C070079BC3B /* GDBD.xcdatamodel */;
+			currentVersion = 469E61C728CCC9AE008D86B3 /* GDBD.xcdatamodel */;
 			path = GDBD.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

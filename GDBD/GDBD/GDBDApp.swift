@@ -12,7 +12,7 @@ struct GDBDApp: App {
 
     var body: some Scene {
         WindowGroup {
-            MainTabBarView()
+            MainTabBarView(storageService: DotCoreDataService())
         }
     }
 }
