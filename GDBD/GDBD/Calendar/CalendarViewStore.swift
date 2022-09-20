@@ -35,7 +35,7 @@ class CalendarViewStore: ObservableObject {
     init(storageService: DotService, date: Binding<Date>) {
         self.storageService = storageService
         self._selectedDate = date
-        
+
         fetchMonthlyDots()
     }
     

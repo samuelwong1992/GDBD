@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		460BA6B028D48AD500ECD890 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460BA6AF28D48AD500ECD890 /* StatsView.swift */; };
+		460BA6B328D48BB200ECD890 /* MainTabBarViewStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460BA6B228D48BB200ECD890 /* MainTabBarViewStore.swift */; };
 		46371FA328AF5C070079BC3B /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46371F9D28AF5C070079BC3B /* Persistence.swift */; };
 		46371FA428AF5C070079BC3B /* DotCoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46371F9F28AF5C070079BC3B /* DotCoreDataService.swift */; };
 		46371FA728AF5E190079BC3B /* DotService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46371FA628AF5E190079BC3B /* DotService.swift */; };
@@ -65,6 +67,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		460BA6AF28D48AD500ECD890 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
+		460BA6B228D48BB200ECD890 /* MainTabBarViewStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewStore.swift; sourceTree = "<group>"; };
 		46371F9D28AF5C070079BC3B /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		46371F9F28AF5C070079BC3B /* DotCoreDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DotCoreDataService.swift; sourceTree = "<group>"; };
 		46371FA628AF5E190079BC3B /* DotService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotService.swift; sourceTree = "<group>"; };
@@ -133,6 +137,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		460BA6AE28D48AC000ECD890 /* Stats */ = {
+			isa = PBXGroup;
+			children = (
+				460BA6AF28D48AD500ECD890 /* StatsView.swift */,
+			);
+			path = Stats;
+			sourceTree = "<group>";
+		};
+		460BA6B128D48B9C00ECD890 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				46E90BBF28ADD1F700A63878 /* NewDotView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		46371F9728AF5C070079BC3B /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
@@ -231,6 +251,7 @@
 				46E90BBE28ADD1E200A63878 /* Main UI */,
 				46F4C93328B31D8300641857 /* Create Dot */,
 				466C658028A6181000DF8951 /* Calendar */,
+				460BA6AE28D48AC000ECD890 /* Stats */,
 				46E90BBB28ADBC6100A63878 /* Helpers */,
 				46F4C93628B3BE5700641857 /* Constants */,
 				46E90C0D28AF5B1400A63878 /* Data */,
@@ -306,7 +327,6 @@
 			isa = PBXGroup;
 			children = (
 				469BFA0C28CE131600D380D4 /* StyleSwitcher */,
-				469E61D328CCDA7A008D86B3 /* MonthDatePicker */,
 				469E61D228CCDA06008D86B3 /* TableView */,
 				469E61BA28CCC31C008D86B3 /* Calendar */,
 				469BFA1228D09C8B00D380D4 /* GDBDCalanderCell */,
@@ -367,8 +387,9 @@
 		46E90BBE28ADD1E200A63878 /* Main UI */ = {
 			isa = PBXGroup;
 			children = (
-				46E90BBF28ADD1F700A63878 /* NewDotView.swift */,
+				460BA6B128D48B9C00ECD890 /* Components */,
 				466C657D28A613ED00DF8951 /* MainTabBarView.swift */,
+				460BA6B228D48BB200ECD890 /* MainTabBarViewStore.swift */,
 			);
 			path = "Main UI";
 			sourceTree = "<group>";
@@ -386,6 +407,7 @@
 		46E90BF128AF3E8000A63878 /* View Components */ = {
 			isa = PBXGroup;
 			children = (
+				469E61D328CCDA7A008D86B3 /* MonthDatePicker */,
 				46F4C93028B3158500641857 /* Text Fields */,
 				46371FA828AF709C0079BC3B /* Buttons */,
 				46E90BBC28ADBC8200A63878 /* RoundedCornerView.swift */,
@@ -579,6 +601,7 @@
 				46371FA428AF5C070079BC3B /* DotCoreDataService.swift in Sources */,
 				4641863728A607DC009188D8 /* GDBDApp.swift in Sources */,
 				469E61C828CCC9AE008D86B3 /* GDBD.xcdatamodeld in Sources */,
+				460BA6B328D48BB200ECD890 /* MainTabBarViewStore.swift in Sources */,
 				466C657E28A613ED00DF8951 /* MainTabBarView.swift in Sources */,
 				46F4C93A28B5A23600641857 /* CreateDotViewStore.swift in Sources */,
 				469E61CB28CCCAAB008D86B3 /* DotCDModel+CoreDataClass.swift in Sources */,
@@ -588,6 +611,7 @@
 				469BFA1428D09CC800D380D4 /* CalendarCell.swift in Sources */,
 				469BFA0E28CE132F00D380D4 /* StyleSwitcher.swift in Sources */,
 				46973B8428B6F55C00037315 /* CalendarViewStore.swift in Sources */,
+				460BA6B028D48AD500ECD890 /* StatsView.swift in Sources */,
 				466C658228A6183000DF8951 /* CreateDotView.swift in Sources */,
 				469E61BC28CCC331008D86B3 /* CalendarComponent.swift in Sources */,
 				46371FAC28AF70B70079BC3B /* PrimaryButton.swift in Sources */,

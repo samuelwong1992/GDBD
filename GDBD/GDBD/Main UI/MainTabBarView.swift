@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct MainTabBarView: View {
-    @State var selectedDate: Date = Date()
+    @ObservedObject var viewStore: MainTabBarViewStore = MainTabBarViewStore()
+    
+//    @State var selectedDate: Date = Date()
     var storageService: DotService
     
     var body: some View {
@@ -16,17 +18,26 @@ struct MainTabBarView: View {
             NewDotView()
                 .foregroundColor(Color.white)
             
-            CalendarView(viewStore: CalendarViewStore(storageService: storageService, date: $selectedDate))
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(RoundedCornerView(tl: 40, tr: 40, bl: 0, br: 0).fill(Color(UIColor.systemBackground)))
+            switch viewStore.currentState {
+            case .Calendar :
+                CalendarView(viewStore: CalendarViewStore(storageService: storageService, date: $viewStore.selectedDate))
+                    .padding(.top)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .background(RoundedCornerView(tl: 40, tr: 40, bl: 0, br: 0).fill(Color(UIColor.systemBackground)))
+            case .Stats :
+                StatsView(viewStore: StatsViewViewStore(date: $viewStore.selectedDate))
+                    .padding(.top)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .background(RoundedCornerView(tl: 40, tr: 40, bl: 0, br: 0).fill(Color(UIColor.systemBackground)))
+            }
             
             HStack {
                 TabBarButton(systemImageName: "calendar", title: "Calendar") {
-                    print("on calendar pressed")
+                    viewStore.currentState = .Calendar
                 }
                 
-                TabBarButton(systemImageName: "chart.xyaxis.line", title: "Progress") {
-                    print("on progress pressed")
+                TabBarButton(systemImageName: "chart.xyaxis.line", title: "Stats") {
+                    viewStore.currentState = .Stats
                 }
             }
             .frame(maxWidth: .infinity)
