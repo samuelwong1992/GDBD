@@ -28,14 +28,15 @@ class DotCoreDataService: DotService {
         dot.dateTimeCreated = atDate
         
         do {
-            try context.save()
             if let category = category, let id = category.id {
-                let storeCoordinator = NSPersistentStoreCoordinator(managedObjectModel: persistenceController.container.managedObjectModel)
-                if let url = URL(string: id), let managedObjectID = storeCoordinator.managedObjectID(forURIRepresentation: url) {
+                if let url = URL(string: id), let managedObjectID = context.persistentStoreCoordinator?.managedObjectID(forURIRepresentation: url) {
                     let categoryInCoreData = try context.existingObject(with: managedObjectID) as! CategoryCDModel
-                    dot.addToCategory(categoryInCoreData)
+                    dot.category = categoryInCoreData
+                    print("gets here")
+                    print(dot.category?.name)
                 }
             }
+            try context.save()
             return completion(DotCDModelFactory.createDot(fromDotCDModel: dot), nil)
         } catch {
             return completion(nil, error)

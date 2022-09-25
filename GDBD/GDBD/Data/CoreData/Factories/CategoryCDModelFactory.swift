@@ -11,7 +11,6 @@ class CategoryCDModelFactory {
     private init() {}
     
     static func createCategory(fromCategoryCDModel categoryCDModel: CategoryCDModel) -> Category {
-        
         return Category(id: categoryCDModel.idString, name: categoryCDModel.name!)
     }
     

@@ -129,4 +129,31 @@ class DotServiceTests: XCTestCase {
             }
         }
     }
+    
+    func test_canHaveCategory() throws {
+        let mockCategoryService = CategoryCoreDataService(persistenceController: persistanceController)
+        
+        let testCategoryName = "category_name"
+        let test_isGood = true
+        let test_text = "some text"
+        
+        mockCategoryService.createCategory(name: testCategoryName) { category, error in
+            XCTAssertNil(error)
+            XCTAssertNotNil(category)
+            
+            XCTAssertEqual(testCategoryName, category?.name)
+            
+            self.mockDotService.createDot(isGood: test_isGood, withText: test_text, atDate: Date(), category: category) { dot, error in
+                XCTAssertNil(error)
+                do {
+                    let dot = try XCTUnwrap(dot)
+                    let dotCategory = try XCTUnwrap(dot.category)
+                    XCTAssertEqual(testCategoryName, dotCategory.name)
+                } catch {
+                    XCTFail("something created was nil")
+                }
+                
+            }
+        }
+    }
 }

@@ -43,6 +43,7 @@ struct PersistenceController {
         let previewController = PersistenceController(inMemory: true)
         
         let demoCreator = PreviewPersistanceDemoDataCreator(persistanceController: previewController)
+        demoCreator.createRandomDemoCategoryData()
         demoCreator.createRandomDemoDotData()
         
         return previewController

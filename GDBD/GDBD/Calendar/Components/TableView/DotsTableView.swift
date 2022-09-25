@@ -30,6 +30,7 @@ struct DotsTableView: View {
                                 .frame(height: 20)
                         }
                         
+                        Text(dot.category?.name ?? "No Category")
                         Text(dot.text ?? "No Description")
                         
                         Rectangle()
