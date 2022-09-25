@@ -25,6 +25,7 @@
 		4641865928A607DF009188D8 /* GDBDUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4641865828A607DF009188D8 /* GDBDUITestsLaunchTests.swift */; };
 		466C657E28A613ED00DF8951 /* MainTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466C657D28A613ED00DF8951 /* MainTabBarView.swift */; };
 		466C658228A6183000DF8951 /* CreateDotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466C658128A6183000DF8951 /* CreateDotView.swift */; };
+		4691840028E0259500B33AB0 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469183FF28E0259500B33AB0 /* Category.swift */; };
 		46973B8428B6F55C00037315 /* CalendarViewStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46973B8328B6F55C00037315 /* CalendarViewStore.swift */; };
 		46973B8628B72EBF00037315 /* UIColor + Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46973B8528B72EBF00037315 /* UIColor + Utilities.swift */; };
 		469BFA0E28CE132F00D380D4 /* StyleSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469BFA0D28CE132F00D380D4 /* StyleSwitcher.swift */; };
@@ -89,6 +90,7 @@
 		4641865828A607DF009188D8 /* GDBDUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDBDUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		466C657D28A613ED00DF8951 /* MainTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarView.swift; sourceTree = "<group>"; };
 		466C658128A6183000DF8951 /* CreateDotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDotView.swift; sourceTree = "<group>"; };
+		469183FF28E0259500B33AB0 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		46973B8328B6F55C00037315 /* CalendarViewStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewStore.swift; sourceTree = "<group>"; };
 		46973B8528B72EBF00037315 /* UIColor + Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Utilities.swift"; sourceTree = "<group>"; };
 		469BFA0D28CE132F00D380D4 /* StyleSwitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleSwitcher.swift; sourceTree = "<group>"; };
@@ -251,13 +253,13 @@
 			isa = PBXGroup;
 			children = (
 				4641863628A607DC009188D8 /* GDBDApp.swift */,
+				46E90C0D28AF5B1400A63878 /* Data */,
 				46E90BBE28ADD1E200A63878 /* Main UI */,
 				46F4C93328B31D8300641857 /* Create Dot */,
 				466C658028A6181000DF8951 /* Calendar */,
 				460BA6AE28D48AC000ECD890 /* Stats */,
 				46E90BBB28ADBC6100A63878 /* Helpers */,
 				46F4C93628B3BE5700641857 /* Constants */,
-				46E90C0D28AF5B1400A63878 /* Data */,
 				4641863A28A607DF009188D8 /* Assets.xcassets */,
 				4641863C28A607DF009188D8 /* Preview Content */,
 			);
@@ -350,6 +352,7 @@
 			isa = PBXGroup;
 			children = (
 				469E61C028CCC872008D86B3 /* Dot.swift */,
+				469183FF28E0259500B33AB0 /* Category.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -610,6 +613,7 @@
 				469E61BE28CCC367008D86B3 /* GDBDCalendarViewCell.swift in Sources */,
 				46371FAE28AF717A0079BC3B /* SecondaryButton.swift in Sources */,
 				46371FA428AF5C070079BC3B /* DotCoreDataService.swift in Sources */,
+				4691840028E0259500B33AB0 /* Category.swift in Sources */,
 				4641863728A607DC009188D8 /* GDBDApp.swift in Sources */,
 				469E61C828CCC9AE008D86B3 /* GDBD.xcdatamodeld in Sources */,
 				460BA6B328D48BB200ECD890 /* MainTabBarViewStore.swift in Sources */,

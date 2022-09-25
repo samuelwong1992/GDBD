@@ -20,11 +20,3 @@ struct Dot: Identifiable {
         self.text = text
     }
 }
-
-class DotGroup: ObservableObject {
-    @Published var dots: [Dot]
-    
-    internal init(dots: [Dot]) {
-        self.dots = dots
-    }
-}

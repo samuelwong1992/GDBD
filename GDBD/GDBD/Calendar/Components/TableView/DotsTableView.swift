@@ -8,17 +8,17 @@
 import SwiftUI
 
 struct DotsTableView: View {
-    @ObservedObject private var dotGroup: DotGroup
+    private var dots: [Dot]
     
     internal init(dots: [Dot]) {
-        self.dotGroup = DotGroup(dots: dots)
+        self.dots = dots
     }
     
     var body: some View {
         ScrollView {
             LazyVStack {
-                ForEach(0 ..< dotGroup.dots.count, id: \.self) { i in
-                    let dot = dotGroup.dots[i]
+                ForEach(0 ..< dots.count, id: \.self) { i in
+                    let dot = dots[i]
                     VStack(alignment: .leading) {
                         HStack {
                             Text( dot.dateTimeCreated.readableString(format: .timeDayMonthYear)

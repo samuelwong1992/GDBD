@@ -18,7 +18,6 @@ class StatsViewViewStore: ObservableObject {
 struct StatsView: View {
     
     @ObservedObject private var viewStore: StatsViewViewStore
-//    @State var viewStore1: CircularGraphViewViewStore
     
     @State var perc1: Double = 6
     @State var perc2: Double = 3
