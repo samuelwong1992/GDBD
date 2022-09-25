@@ -19,7 +19,7 @@ class DotCoreDataService: DotService {
         self.persistenceController = persistenceController
     }
     
-    func createDot(isGood: Bool, withText text: String?, atDate: Date, completion: @escaping(_ dot: Dot?, _ error: Error?) -> Void) {
+    func createDot(isGood: Bool, withText text: String?, atDate: Date, category: Category?, completion: @escaping(_ dot: Dot?, _ error: Error?) -> Void) {
         let context = persistenceController.context
         let dot = DotCDModel(context: context)
         
@@ -29,6 +29,13 @@ class DotCoreDataService: DotService {
         
         do {
             try context.save()
+            if let category = category, let id = category.id {
+                let storeCoordinator = NSPersistentStoreCoordinator(managedObjectModel: persistenceController.container.managedObjectModel)
+                if let url = URL(string: id), let managedObjectID = storeCoordinator.managedObjectID(forURIRepresentation: url) {
+                    let categoryInCoreData = try context.existingObject(with: managedObjectID) as! CategoryCDModel
+                    dot.addToCategory(categoryInCoreData)
+                }
+            }
             return completion(DotCDModelFactory.createDot(fromDotCDModel: dot), nil)
         } catch {
             return completion(nil, error)

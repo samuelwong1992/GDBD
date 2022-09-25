@@ -28,7 +28,7 @@ class DotServiceTests: XCTestCase {
             XCTAssert(dots.isEmpty)
         }
         
-        mockDotService.createDot(isGood: test_isGood, withText: test_text, atDate: test_date) { dot, error in
+        mockDotService.createDot(isGood: test_isGood, withText: test_text, atDate: test_date, category: nil) { dot, error in
             do {
                 let testDot = try XCTUnwrap(dot)
                 XCTAssert(testDot.isGood == test_isGood)
@@ -55,7 +55,7 @@ class DotServiceTests: XCTestCase {
         let test_isGood = true
         let test_text = "some text"
         
-        mockDotService.createDot(isGood: test_isGood, withText: test_text, atDate: Date()) { dot, error in
+        mockDotService.createDot(isGood: test_isGood, withText: test_text, atDate: Date(), category: nil) { dot, error in
             do {
                 let _ = try XCTUnwrap(dot)
             } catch {
@@ -63,7 +63,7 @@ class DotServiceTests: XCTestCase {
             }
         }
         
-        mockDotService.createDot(isGood: test_isGood, withText: test_text, atDate: Date().addingMonths(numMonths: 2)) { dot, error in
+        mockDotService.createDot(isGood: test_isGood, withText: test_text, atDate: Date().addingMonths(numMonths: 2), category: nil) { dot, error in
             do {
                 let _ = try XCTUnwrap(dot)
             } catch {
@@ -71,7 +71,7 @@ class DotServiceTests: XCTestCase {
             }
         }
         
-        mockDotService.createDot(isGood: test_isGood, withText: test_text, atDate: Date().addingMonths(numMonths: -2)) { dot, error in
+        mockDotService.createDot(isGood: test_isGood, withText: test_text, atDate: Date().addingMonths(numMonths: -2), category: nil) { dot, error in
             do {
                 let _ = try XCTUnwrap(dot)
             } catch {
@@ -79,7 +79,7 @@ class DotServiceTests: XCTestCase {
             }
         }
         
-        mockDotService.createDot(isGood: test_isGood, withText: test_text, atDate: Date().addingDays(numDays: 1)) { dot, error in
+        mockDotService.createDot(isGood: test_isGood, withText: test_text, atDate: Date().addingDays(numDays: 1), category: nil) { dot, error in
             do {
                 let _ = try XCTUnwrap(dot)
             } catch {
@@ -103,7 +103,7 @@ class DotServiceTests: XCTestCase {
             XCTAssertNil(dot)
         }
         
-        mockDotService.createDot(isGood: test_isGood, withText: test_text, atDate: date) { dot, error in
+        mockDotService.createDot(isGood: test_isGood, withText: test_text, atDate: date, category: nil) { dot, error in
             XCTAssertNotNil(dot)
         }
         
@@ -116,7 +116,7 @@ class DotServiceTests: XCTestCase {
             }
         }
         
-        mockDotService.createDot(isGood: test_isGood, withText: test_text, atDate: earlierDate) { dot, error in
+        mockDotService.createDot(isGood: test_isGood, withText: test_text, atDate: earlierDate, category: nil) { dot, error in
             XCTAssertNotNil(dot)
         }
         

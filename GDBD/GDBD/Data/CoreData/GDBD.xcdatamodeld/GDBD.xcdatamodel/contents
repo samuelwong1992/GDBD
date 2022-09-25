@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21277" systemVersion="21G83" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21279" systemVersion="21G115" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CategoryCDModel" representedClassName=".CategoryCDModel" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="dots" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DotCDModel" inverseName="category" inverseEntity="DotCDModel"/>
+    </entity>
     <entity name="DotCDModel" representedClassName=".DotCDModel" syncable="YES">
         <attribute name="dateTimeCreated" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="isGood" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="text" optional="YES" attributeType="String"/>
+        <relationship name="category" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CategoryCDModel" inverseName="dots" inverseEntity="CategoryCDModel"/>
     </entity>
 </model>

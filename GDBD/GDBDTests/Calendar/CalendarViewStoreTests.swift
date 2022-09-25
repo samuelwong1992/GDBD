@@ -18,18 +18,18 @@ final class CalendarViewStoreTests: XCTestCase {
         
         let dotCDService = DotCoreDataService(persistenceController: persistenceController)
         
-        dotCDService.createDot(isGood: true, withText: nil, atDate: Date().firstDateOfMonth()) { dot, error in }
-        dotCDService.createDot(isGood: true, withText: nil, atDate: Date().firstDateOfMonth().addingDays(numDays: 1)) { dot, error in }
-        dotCDService.createDot(isGood: true, withText: nil, atDate: Date().firstDateOfMonth().addingDays(numDays: 2)) { dot, error in }
-        dotCDService.createDot(isGood: false, withText: nil, atDate: Date().lastDateOfMonth()) { dot, error in }
-        dotCDService.createDot(isGood: false, withText: nil, atDate: Date().lastDateOfMonth().addingDays(numDays: -1)) { dot, error in }
-        dotCDService.createDot(isGood: false, withText: nil, atDate: Date().lastDateOfMonth().addingDays(numDays: -2)) { dot, error in }
+        dotCDService.createDot(isGood: true, withText: nil, atDate: Date().firstDateOfMonth(), category: nil) { dot, error in }
+        dotCDService.createDot(isGood: true, withText: nil, atDate: Date().firstDateOfMonth().addingDays(numDays: 1), category: nil) { dot, error in }
+        dotCDService.createDot(isGood: true, withText: nil, atDate: Date().firstDateOfMonth().addingDays(numDays: 2), category: nil) { dot, error in }
+        dotCDService.createDot(isGood: false, withText: nil, atDate: Date().lastDateOfMonth(), category: nil) { dot, error in }
+        dotCDService.createDot(isGood: false, withText: nil, atDate: Date().lastDateOfMonth().addingDays(numDays: -1), category: nil) { dot, error in }
+        dotCDService.createDot(isGood: false, withText: nil, atDate: Date().lastDateOfMonth().addingDays(numDays: -2), category: nil) { dot, error in }
         
-        dotCDService.createDot(isGood: true, withText: nil, atDate: Date().firstDateOfMonth().addingMonths(numMonths: 3)) { dot, error in }
-        dotCDService.createDot(isGood: true, withText: nil, atDate: Date().firstDateOfMonth().addingMonths(numMonths: 2)) { dot, error in }
+        dotCDService.createDot(isGood: true, withText: nil, atDate: Date().firstDateOfMonth().addingMonths(numMonths: 3), category: nil) { dot, error in }
+        dotCDService.createDot(isGood: true, withText: nil, atDate: Date().firstDateOfMonth().addingMonths(numMonths: 2), category: nil) { dot, error in }
         
-        dotCDService.createDot(isGood: true, withText: nil, atDate: Date().firstDateOfMonth().addingMonths(numMonths: -3)) { dot, error in }
-        dotCDService.createDot(isGood: true, withText: nil, atDate: Date().firstDateOfMonth().addingMonths(numMonths: -2)) { dot, error in }
+        dotCDService.createDot(isGood: true, withText: nil, atDate: Date().firstDateOfMonth().addingMonths(numMonths: -3), category: nil) { dot, error in }
+        dotCDService.createDot(isGood: true, withText: nil, atDate: Date().firstDateOfMonth().addingMonths(numMonths: -2), category: nil) { dot, error in }
         
     }
     

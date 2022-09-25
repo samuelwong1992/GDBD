@@ -26,6 +26,14 @@
 		466C657E28A613ED00DF8951 /* MainTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466C657D28A613ED00DF8951 /* MainTabBarView.swift */; };
 		466C658228A6183000DF8951 /* CreateDotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466C658128A6183000DF8951 /* CreateDotView.swift */; };
 		4691840028E0259500B33AB0 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469183FF28E0259500B33AB0 /* Category.swift */; };
+		4691840528E0296600B33AB0 /* DotCDModel+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4691840128E0296600B33AB0 /* DotCDModel+CoreDataClass.swift */; };
+		4691840628E0296600B33AB0 /* DotCDModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4691840228E0296600B33AB0 /* DotCDModel+CoreDataProperties.swift */; };
+		4691840728E0296600B33AB0 /* CategoryCDModel+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4691840328E0296600B33AB0 /* CategoryCDModel+CoreDataClass.swift */; };
+		4691840828E0296600B33AB0 /* CategoryCDModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4691840428E0296600B33AB0 /* CategoryCDModel+CoreDataProperties.swift */; };
+		4691840A28E0299A00B33AB0 /* CategoryCoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4691840928E0299A00B33AB0 /* CategoryCoreDataService.swift */; };
+		4691840C28E02BB600B33AB0 /* CategoryCDModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4691840B28E02BB600B33AB0 /* CategoryCDModelFactory.swift */; };
+		4691840E28E02E1800B33AB0 /* PreviewPersistanceDemoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4691840D28E02E1800B33AB0 /* PreviewPersistanceDemoData.swift */; };
+		4691841028E06F4B00B33AB0 /* NSManagedObject + Utilites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4691840F28E06F4B00B33AB0 /* NSManagedObject + Utilites.swift */; };
 		46973B8428B6F55C00037315 /* CalendarViewStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46973B8328B6F55C00037315 /* CalendarViewStore.swift */; };
 		46973B8628B72EBF00037315 /* UIColor + Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46973B8528B72EBF00037315 /* UIColor + Utilities.swift */; };
 		469BFA0E28CE132F00D380D4 /* StyleSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469BFA0D28CE132F00D380D4 /* StyleSwitcher.swift */; };
@@ -35,8 +43,6 @@
 		469E61BE28CCC367008D86B3 /* GDBDCalendarViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469E61BD28CCC367008D86B3 /* GDBDCalendarViewCell.swift */; };
 		469E61C128CCC872008D86B3 /* Dot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469E61C028CCC872008D86B3 /* Dot.swift */; };
 		469E61C828CCC9AE008D86B3 /* GDBD.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 469E61C628CCC9AE008D86B3 /* GDBD.xcdatamodeld */; };
-		469E61CB28CCCAAB008D86B3 /* DotCDModel+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469E61C928CCCAAB008D86B3 /* DotCDModel+CoreDataClass.swift */; };
-		469E61CC28CCCAAB008D86B3 /* DotCDModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469E61CA28CCCAAB008D86B3 /* DotCDModel+CoreDataProperties.swift */; };
 		469E61CF28CCCC60008D86B3 /* DotCDModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469E61CE28CCCC60008D86B3 /* DotCDModelFactory.swift */; };
 		469E61D128CCD7B1008D86B3 /* DotsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469E61D028CCD7B1008D86B3 /* DotsTableView.swift */; };
 		469E61D528CCE1E0008D86B3 /* MonthDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469E61D428CCE1E0008D86B3 /* MonthDatePicker.swift */; };
@@ -91,6 +97,14 @@
 		466C657D28A613ED00DF8951 /* MainTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarView.swift; sourceTree = "<group>"; };
 		466C658128A6183000DF8951 /* CreateDotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDotView.swift; sourceTree = "<group>"; };
 		469183FF28E0259500B33AB0 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		4691840128E0296600B33AB0 /* DotCDModel+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DotCDModel+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4691840228E0296600B33AB0 /* DotCDModel+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DotCDModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4691840328E0296600B33AB0 /* CategoryCDModel+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CategoryCDModel+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4691840428E0296600B33AB0 /* CategoryCDModel+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CategoryCDModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4691840928E0299A00B33AB0 /* CategoryCoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCoreDataService.swift; sourceTree = "<group>"; };
+		4691840B28E02BB600B33AB0 /* CategoryCDModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCDModelFactory.swift; sourceTree = "<group>"; };
+		4691840D28E02E1800B33AB0 /* PreviewPersistanceDemoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewPersistanceDemoData.swift; sourceTree = "<group>"; };
+		4691840F28E06F4B00B33AB0 /* NSManagedObject + Utilites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObject + Utilites.swift"; sourceTree = "<group>"; };
 		46973B8328B6F55C00037315 /* CalendarViewStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewStore.swift; sourceTree = "<group>"; };
 		46973B8528B72EBF00037315 /* UIColor + Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Utilities.swift"; sourceTree = "<group>"; };
 		469BFA0D28CE132F00D380D4 /* StyleSwitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleSwitcher.swift; sourceTree = "<group>"; };
@@ -100,8 +114,6 @@
 		469E61BD28CCC367008D86B3 /* GDBDCalendarViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDBDCalendarViewCell.swift; sourceTree = "<group>"; };
 		469E61C028CCC872008D86B3 /* Dot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dot.swift; sourceTree = "<group>"; };
 		469E61C728CCC9AE008D86B3 /* GDBD.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GDBD.xcdatamodel; sourceTree = "<group>"; };
-		469E61C928CCCAAB008D86B3 /* DotCDModel+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DotCDModel+CoreDataClass.swift"; sourceTree = "<group>"; };
-		469E61CA28CCCAAB008D86B3 /* DotCDModel+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DotCDModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		469E61CE28CCCC60008D86B3 /* DotCDModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotCDModelFactory.swift; sourceTree = "<group>"; };
 		469E61D028CCD7B1008D86B3 /* DotsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotsTableView.swift; sourceTree = "<group>"; };
 		469E61D428CCE1E0008D86B3 /* MonthDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthDatePicker.swift; sourceTree = "<group>"; };
@@ -173,8 +185,10 @@
 		46371F9A28AF5C070079BC3B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				469E61C928CCCAAB008D86B3 /* DotCDModel+CoreDataClass.swift */,
-				469E61CA28CCCAAB008D86B3 /* DotCDModel+CoreDataProperties.swift */,
+				4691840128E0296600B33AB0 /* DotCDModel+CoreDataClass.swift */,
+				4691840228E0296600B33AB0 /* DotCDModel+CoreDataProperties.swift */,
+				4691840328E0296600B33AB0 /* CategoryCDModel+CoreDataClass.swift */,
+				4691840428E0296600B33AB0 /* CategoryCDModel+CoreDataProperties.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -183,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				46371F9F28AF5C070079BC3B /* DotCoreDataService.swift */,
+				4691840928E0299A00B33AB0 /* CategoryCoreDataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -270,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				4641863D28A607DF009188D8 /* Preview Assets.xcassets */,
+				4691840D28E02E1800B33AB0 /* PreviewPersistanceDemoData.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -361,6 +377,7 @@
 			isa = PBXGroup;
 			children = (
 				469E61CE28CCCC60008D86B3 /* DotCDModelFactory.swift */,
+				4691840B28E02BB600B33AB0 /* CategoryCDModelFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -414,6 +431,7 @@
 				46E90BF228AF3E9700A63878 /* Date + Utilities.swift */,
 				46F4C93428B346D200641857 /* NSError + Utilities.swift */,
 				46973B8528B72EBF00037315 /* UIColor + Utilities.swift */,
+				4691840F28E06F4B00B33AB0 /* NSManagedObject + Utilites.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -606,10 +624,13 @@
 				46371FA328AF5C070079BC3B /* Persistence.swift in Sources */,
 				46E90BF328AF3E9700A63878 /* Date + Utilities.swift in Sources */,
 				46F4C93528B346D200641857 /* NSError + Utilities.swift in Sources */,
+				4691841028E06F4B00B33AB0 /* NSManagedObject + Utilites.swift in Sources */,
 				469E61CF28CCCC60008D86B3 /* DotCDModelFactory.swift in Sources */,
 				46973B8628B72EBF00037315 /* UIColor + Utilities.swift in Sources */,
+				4691840528E0296600B33AB0 /* DotCDModel+CoreDataClass.swift in Sources */,
 				469E61D528CCE1E0008D86B3 /* MonthDatePicker.swift in Sources */,
 				46E90BEF28AF39EC00A63878 /* CalendarView.swift in Sources */,
+				4691840A28E0299A00B33AB0 /* CategoryCoreDataService.swift in Sources */,
 				469E61BE28CCC367008D86B3 /* GDBDCalendarViewCell.swift in Sources */,
 				46371FAE28AF717A0079BC3B /* SecondaryButton.swift in Sources */,
 				46371FA428AF5C070079BC3B /* DotCoreDataService.swift in Sources */,
@@ -617,23 +638,26 @@
 				4641863728A607DC009188D8 /* GDBDApp.swift in Sources */,
 				469E61C828CCC9AE008D86B3 /* GDBD.xcdatamodeld in Sources */,
 				460BA6B328D48BB200ECD890 /* MainTabBarViewStore.swift in Sources */,
+				4691840828E0296600B33AB0 /* CategoryCDModel+CoreDataProperties.swift in Sources */,
 				46D6D60428DF384A00E74E0A /* CircularGraph.swift in Sources */,
 				466C657E28A613ED00DF8951 /* MainTabBarView.swift in Sources */,
 				46F4C93A28B5A23600641857 /* CreateDotViewStore.swift in Sources */,
-				469E61CB28CCCAAB008D86B3 /* DotCDModel+CoreDataClass.swift in Sources */,
+				4691840728E0296600B33AB0 /* CategoryCDModel+CoreDataClass.swift in Sources */,
 				46371FA728AF5E190079BC3B /* DotService.swift in Sources */,
 				46F4C93828B3BE6300641857 /* Colors.swift in Sources */,
 				46371FAA28AF70AA0079BC3B /* BaseButton.swift in Sources */,
 				469BFA1428D09CC800D380D4 /* CalendarCell.swift in Sources */,
 				469BFA0E28CE132F00D380D4 /* StyleSwitcher.swift in Sources */,
+				4691840C28E02BB600B33AB0 /* CategoryCDModelFactory.swift in Sources */,
 				46973B8428B6F55C00037315 /* CalendarViewStore.swift in Sources */,
 				460BA6B028D48AD500ECD890 /* StatsView.swift in Sources */,
 				466C658228A6183000DF8951 /* CreateDotView.swift in Sources */,
 				469E61BC28CCC331008D86B3 /* CalendarComponent.swift in Sources */,
 				46371FAC28AF70B70079BC3B /* PrimaryButton.swift in Sources */,
 				46E90BC028ADD1F700A63878 /* NewDotView.swift in Sources */,
-				469E61CC28CCCAAB008D86B3 /* DotCDModel+CoreDataProperties.swift in Sources */,
+				4691840628E0296600B33AB0 /* DotCDModel+CoreDataProperties.swift in Sources */,
 				46F4C93228B3159A00641857 /* TitledTextField.swift in Sources */,
+				4691840E28E02E1800B33AB0 /* PreviewPersistanceDemoData.swift in Sources */,
 				469E61C128CCC872008D86B3 /* Dot.swift in Sources */,
 				46E90BBD28ADBC8200A63878 /* RoundedCornerView.swift in Sources */,
 			);

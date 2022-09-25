@@ -16,7 +16,7 @@ class DotMockService: DotService {
         self.succeeds = succeeds
     }
     
-    func createDot(isGood: Bool, withText text: String?, atDate: Date, completion: @escaping (GDBD.Dot?, Error?) -> Void) {
+    func createDot(isGood: Bool, withText text: String?, atDate: Date, category: GDBD.Category?, completion: @escaping (GDBD.Dot?, Error?) -> Void) {
         if succeeds {
             let dot = Dot(
                 dateTimeCreated: atDate,
